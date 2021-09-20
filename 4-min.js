@@ -12,12 +12,31 @@
  * Do not use Math.min
  */
 
-// Your code here.
-//
-// Use these commands to test your code:
-//
-//console.log(min(0, 10));
-// → 0
-// console.log(min(0, -10));
-// → -10
-//
+console.log('Minimum of two arguments');
+ function min(first, second) {
+    let min = '';
+    if (first < second) {
+        min = first;
+    } else {
+      min = second;
+    }
+    return min;
+  }
+  
+  console.log(min(0, 10));
+  console.log(min(0, -10));
+
+
+console.log('Minimum from array');
+let minArr = arr => {
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (min > arr[i]) {
+        min = arr[i];
+      }
+    }
+    
+    return min;
+  }
+  
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
