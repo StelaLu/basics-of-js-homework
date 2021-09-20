@@ -16,4 +16,15 @@
  *
  */
 
-// Your code here.
+console.log('Loop that makes seven calls to console.log');
+for (let i = 1; i < 8; i++) {
+    console.log('#'.repeat(i));
+  }
+
+console.log('Loop and one call to console.log');
+let str = '';
+for (let i = 1; i < 8; i++) {
+    str += '#'.repeat(i) + '\n';
+  }
+
+console.log(str);
