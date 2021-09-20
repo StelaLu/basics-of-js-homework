@@ -20,4 +20,25 @@
  *
  */
 
-// Your code here.
+let width = Number(prompt('Set the width'));
+let height = Number(prompt('Set the height'));
+let result = '';
+
+function chessboard(width, height) {
+if (width && height) {
+    for (let i = 1; i <= height; i++) {
+      if (i % 2 === 0) {
+        result += ' #'.repeat(width) + '\n';
+      } else if (i < height) {
+        result += '# '.repeat(width) + '\n';
+      } else {
+        result += '# '.repeat(width);
+      }
+    }
+    console.log(result);
+  } else {
+    console.log('You didn\'t set the width and height or they are not numbers');
+  }
+}
+
+chessboard(width, height);
